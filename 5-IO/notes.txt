@@ -1,0 +1,100 @@
+FILE I/O
+
+FILE I/O is same as TERMINAL I/O except we have to open the file
+
+To open a file we need a file handler ( in C type FILE *) which has to be specified as an argument
+to read or write file.
+
+After the work is done FILE must be closed.
+
+OPENING A FILE : 
+
+Library function fopen() is used:
+FILE *fopen(char *filename, char *mode)
+
+modes are :
+- r 			: Open a text file for reading
+- w   file exist 	: Overwrite a text file for writing 
+      file absent	: Create new text file for writing
+- a 			: Append data to a text file
+- rb			: Opens a binary file for reading
+- wb 			: Create a binary fie for writing
+- ab 			: Append to a binary file
+- r+			: Open a text file for read/write
+- w+			: Create a text file for read/write
+- a+			: Append or create a text file for read/ write
+- rb+/r+b		: Open a binary file for read/ write
+- wb+			: Create a binary file for read / write
+- ab+			: append / create a binary file for read / write
+
+
+if file cant be opend the NULL is returned
+
+FUNCTIONS FOR FILE I/O
+
+- int fscanf(FILE *fp, char *formatting,...)     == scanf()
+- int fgetc(FILE *fp) 			         == getchar()
+- char *fgets(char *s, int size, FILE *fp)       == gets()
+
+
+- int fprintf(FILE *fp, char *formatting, ...)   == printf()
+- int fputc(int c, FILE *fp)			 == putchar()
+- int fputs(char *s, FILE *fp)			 == puts()
+
+-int fclose(FILE *fp) //close the file
+
+
+*Write a prigram that:
+	-reads an input file name and output filename from the terminal
+	-reads students records(one per line) from the input file,
+	-sorts the records by roll number,
+	-writes the sorted student records to the output file
+
+
+#include<stdio.h>
+	-size_t
+	-fpos_t
+	-FILE
+	
+	:size_t & fpos_t some varity of unsigned integer.
+FILE *fp;
+fp = fopen("abc.c", "r");
+
+- (FILE *) fopen(char *file_name, char *mode)		: Open a file. Returns a stream of FILE *
+
+- int fclose(FILE *fp)					: Closes a file. Returns 0 if successfully closed else EOF.
+
+- int putc(int ch, FILE *fp)				: Writes a character to a file.
+
+- fptuc(FILE *fp)					: same as putc().
+- getc(FILE *fp)					: Read a character from a file.
+- fgetc(FILE *fp)					: same as getc().
+- fgets()						: Reads a String from a file.
+- fputs()						: Writes a string to a file.
+- fseek()						: Seek to specified byte in file.
+- ftell(FILE *fp)					: Returns the current position in file
+- fprintf()						: Is to a file what printf() is to console
+- fscanf()						: Is to a file what scanf() is to console
+- feof(FILE *fp)					: Returns true if eon-of-file is reached
+- ferror()						: Returns true value is error has occured.
+- rewind(FILE *fp)					: Reset the file position indicator to the begining of the file
+- remove(FILE *fp)					: REmove a file
+- fflush(FILE *fp)					: Flush a file
+
+::::MACROS::::
+
+- NULL			0
+- EOF			-1
+- FOPEN_MAX		some int telling max number of files can be opened
+- SEEK_SET
+- SEEK_CUR
+- SEEK_END
+
+
+::: file pointer :::
+
+- File pointer is a structure to type FILE
+- It contains informations like
+	- name of file
+	- current position of the file 
+	- status

@@ -1,0 +1,18 @@
+IMPLICIT TYPE CASTING
+
+In ARITHMETIC operator the lower size data type is converted to the higher type
+
+In ASSIGNMENT operator the expression value is converted to the datatype holding the expression
+
+float y;
+int x;
+
+y = x = 7.0/5;		y = 1; x = 1 (RIGHT TO LEFT)
+
+x = y = 7.0/5;		x = 1; y = 1.4 (RIGHT TO LEFT, IMPLICIT CONVERSION OF ASSIGNMENT)
+
+NOTE: 
+1: THE C LANGUAGE DOESNT SPECIFY THE ORDER IN WHICH THE INCREMENT OR DECREMENT OPERATOR WILL BE EVALUATED
+2: THE C LANGUAGE DOESNT SPECIFY THE ORDER IN WHICH THE EXPRESSION INSIDE PRINTF STATEMENT IS EXECUTED
+
+ 

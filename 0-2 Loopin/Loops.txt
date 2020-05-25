@@ -1,0 +1,41 @@
+for(e1 ; e2; e3)
+
+    statements
+
+
+
+equal to 
+
+e1;
+
+
+while(e2)
+
+  statements
+
+  e3
+
+
+break
+
+
+continue
+ 
+
+  If within a loop continue is executed the it will stop executing the next statement and start executions from the next iteration.
+
+
+  In do while and while the continue statement transfer the control to the conditional expression but in case of for loop it transfer the condition to the increment expression.
+
+
+
+ECULID GCF PROPERTIES
+
+
+1. GNF(a,b) = GNF(b,a)
+
+2. GNF(a,a) = a
+
+3. GNF(a,b) = GNF(a-b, b) if a > b
+
+

@@ -1,0 +1,20 @@
+THE PROPERTIES OF &&, || OPERATOR IN EXPRESSION: 
+
+e1 and e2 are two expressions
+e is the final expression
+
+we Know that direction of resolving an expression is from Left to Right in case of && , || Operators
+
+e = e1 && e2 
+	First e1 will be resolved according to the property of && operator
+	IF 
+		e1 is false
+	Then
+		e2 will not be resolved and false will be stored in e
+
+e = e1 || e2 
+	First e1 will be resolved according to the property of ||operator
+	IF 
+		e1 is true
+	Then
+		e2 will not be resolved and True will be stored in e

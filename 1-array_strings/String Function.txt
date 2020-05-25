@@ -1,0 +1,9 @@
+STING MANIPULATIONS
+
+HEADER FILE : string.h
+
+functions:
+
+strcasesmp(s1,s2) :		Compares to string ignoring the case
+strcmp(s1, s2, n) : 		Compares the first n character of the strcpy(s1, s2): 		Copy s2 to s1
+strcpy(s1, s2, n) :		Copy n character from s2

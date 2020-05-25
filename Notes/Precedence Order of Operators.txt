@@ -1,0 +1,12 @@
+OPERATORS ARE ARRANGED FROM HIGHER TO LOWER PRECEDENCE BELOW: 
+
+	operators			Direction of Execution of Statement
+
+1. !, +(unary), -(unary), ++, --		Right to Left
+2. *, /, %				Left to Right
+3. +, -					Left to Right
+4. <, >, <=, >=				Left to Right
+5. !=, ==					Left to Right
+6. &&					Left to Right
+7. ||					Left to Right
+8. =, +=, -=, *=, /=, %= 			Right to Left
